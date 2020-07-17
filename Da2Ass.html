@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset='UTF-8'>
+<script type="text/javascript">
+
+//*********************************************************************************************************************//	
+//Question 1: Accept input from user and log into console
+
+var name=window.prompt('Enter your name');
+alert("Hello"+name);
+console.log(name);
+
+//*********************************************************************************************************************//	
+
+
+
+//Question 2:
+
+// string methods
+
+var name="Hello Dear How are you Dear "
+
+var age="21 years."
+
+
+//finding length of string
+console.log(name.length)
+
+// finding index of word/letter in string
+console.log(name.indexOf('are'))
+
+console.log(name.lastIndexOf('Dear'))
+
+//searching in string
+
+console.log(name.search('How'))
+
+//Regular Expression
+
+//dividiing string
+
+console.log(name.slice(10,20))
+
+console.log(name.substring(10,24))
+
+console.log(name.substr(10,15))
+
+//replace first occurance of word with another word
+
+console.log(name.replace('Dear','Love'))
+
+//replace first occurance of word with another word
+
+//console.log(name.replaceAll('Dear','Love'))
+
+// convert to uppercase
+
+console.log(name.toUpperCase(name))
+
+// convert to uppercase
+
+console.log(name.toLowerCase(name))
+
+// Array concatination
+
+console.log(name.concat(age))
+
+// removing Empty spaces/trimming
+
+let coll='	MCASC	';
+console.log(coll.trim())
+
+//converting strings to array
+
+let str="a,b,c,d"
+
+console.log(str.split(","))
+
+//Array methods
+
+
+let arr=['Navnath','Sharad','Akshay','Tejas']
+let arr1=[1,2,3,4]
+console.log(arr)
+
+//converting array to string
+
+console.log(arr.toString())
+
+console.log(arr.join())
+
+//adding elements to array from start
+
+console.log(arr.unshift('Mahesh'))
+console.log(arr)
+
+//removing elements from array
+
+console.log(arr.shift('mahesh'))
+console.log(arr)
+
+//adding elements to array from end
+
+console.log(arr.push('Vaibhav'))
+console.log(arr)
+
+//removing elements from array
+
+
+console.log(arr.pop('Vaibhav'))
+console.log(arr)
+
+console.log(arr.indexOf('Akshay'))
+
+//adding elements to array
+
+console.log(arr.splice(2,1,'Bipin','Omkar'))
+console.log(arr)
+
+console.log(arr.concat(arr1))
+
+
+//*********************************************************************************************************************//	
+
+
+//Question 3 if-else loop
+
+let Age=prompt("Enter your age")
+console.log(Age)
+
+if(Age>21)
+	console.log("can drink")
+else
+	console.log("can't drink")
+
+
+
+
+</script>
+</head>
+</html>
