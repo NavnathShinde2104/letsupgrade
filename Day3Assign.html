@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<title>Day 3 Assignment</title>
+</head>
+<body>
+
+<script type="text/javascript" defer>
+
+//Question 1: To check Entered NUmber is even or odd
+	function check(num)
+		{
+
+		if(num%2==0)
+			result=console.log("Number Entered is"+num+" and number is even")
+		else
+			result=console.log("Number Entered is"+num+" and number odd")
+		}
+
+		var num=prompt("Enter the Number")
+		check(num)
+
+
+//Question 2:To display Os name and version by accepting os name
+
+ var OS=prompt("Enter OS name:")
+ var O=OS.split(" ")
+ console.log("Os name:"+O[0]+"\tVersion:"+O[1])
+
+
+//Question 3:Accept marks of student and displaying Result in Grade
+
+let marks=prompt("Enter the student marks:")
+console.log("Displaying Result in Grade format")
+
+
+if(marks>=75 & marks<100)
+	console.log("Congratulations You secure:"+marks+" \t and Got A Grade")
+else
+	if(marks>=65 & marks<75)
+		console.log("Congratulations You secure:"+marks+" \t and Got B Grade")
+else
+	if(marks>=50 & marks<65)
+		console.log("Congratulations You secure:"+marks+" \t and Got C Grade")
+else
+	if(marks>=35 & marks<50)
+		console.log("Congratulations You secure:"+marks+" \t and Got D Grade")
+else
+   if(marks<35)
+		console.log("Sorry You secure:"+marks+" \t and Got Failed")
+
+console.log("Displaying Result using Ternary operators")
+result(marks)
+
+
+function result(marks)
+{
+	return	(marks>=75 & marks<100)?	console.log("Congratulations You secure:"+marks+" \t and Got A Grade")
+		  :(marks>=65 & marks<75)? console.log("Congratulations You secure:"+marks+" \t and Got B Grade")
+		  :(marks>=50 & marks<65)? console.log("Congratulations You secure:"+marks+" \t and Got C Grade")
+		  :(marks>=35 & marks<50)? console.log("Congratulations You secure:"+marks+" \t and Got D Grade")
+		  :(marks<35)? console.log("Sorry You secure:"+marks+" \t and Got Failed")
+		  
+}
+	
+</script>
+
+</body>
+</html>
