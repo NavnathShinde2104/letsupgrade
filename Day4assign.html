@@ -1,0 +1,153 @@
+<html>
+<head>
+
+	<script type="text/javascript">
+		
+	//Question 1: create a for loop that iterates upto 100 while outputing "fizz" at multiple of 3,"buzz" at multiple of 				5 and fizzbuzz at multiple of 3 and 5
+	/*
+	var num=prompt("Enter a number:")
+
+	if(num%3==0 && num%5==0)
+			console.log("fizzbuzz")	
+		else
+		if(num%5==0)
+			console.log("buzz")
+		else
+			if(num%3==0)
+				console.log("fizz")	
+	*/
+	
+	//Question 2:Destructure the following object
+	/*
+	const student={name:"Navnath",age:24,
+					projects:{diceGame:"Two player dice game using javascript"}
+				}
+
+	console.log(student.name)
+	console.log(student.age)
+	console.log(student.projects)
+	*/
+	//Question #:create a array of grocerries and copy that array into another array and add some grocerries to it
+
+
+/*
+	const ShoppingList=["methibhaji","palakbhaji"]
+
+	console.log(ShoppingList)
+
+
+	const ShoppingBasket=[ShoppingList,"bhendi","gavar"]
+
+  
+
+    let n=prompt("How many grocerries you want to buy more")
+
+    let name;
+
+    for(let i=0;i<n;i++)
+    {
+    	name=prompt("Enter grocery name:")
+    	ShoppingBasket.push(name)
+    }
+
+	console.log(ShoppingBasket)
+
+*/
+/*
+Q5)You are managing a sales department for your company,you want to reward your employees based on the sales made by them during the year
+ The criteria is as follows
+ 1)Sales from 0-5000:2%
+ 2)Sales from 5001-10000:5%
+ 3)Sales from 10001-20000:7%
+ 3)Above 20000:10%
+
+Then log the total commission earned by them
+
+
+ let sale=prompt("Enter Employe's annual sale:")
+ if(sale>0 && sale<5001)
+ 		comm=sale*0.02;
+ else
+ 	if(sale>5000 && sale<10001)
+ 		comm=sale*0.05;
+    else
+    	if(sale>10000 && sale<20001)
+ 		 comm=sale*0.07;
+ 		 else
+ 		 	if(sale>20000)
+ 				comm=sale*0.10;
+ 
+ 	document.write("Your commission is:"+comm)
+ 	
+*/
+/*Q6)
+write a loop  which prompts for a number greater than 100.if the visitor enters another number ask them to input again
+The lop must ask for a number  greater than 100 or cancels the input/an empty  line.
+
+Rewrite the function using ? or ||.
+
+
+
+let num=prompt("ENter a number")
+
+while(num)
+{
+	if(num>100)
+	{	console.log("You entered number:"+num+"greate than 100")
+		break;
+	}
+	else
+		num=prompt("ENter a number")
+
+}
+check(num)
+
+function check(num)
+{
+	return(num>100)? console.log("number greate than 100 with ? operator"):num=prompt("ENter a number")
+}
+
+/*An integer number greater than 1 is called a prime if it cannot be divided without a remainder by anything
+except 1 and itself.
+In other words, n > 1 is a prime if it can’t be evenly divided by anything except 1 and n.
+For example, 5 is a prime, because it cannot be divided without a remainder by 2, 3 and 4.
+Write the code which outputs prime numbers in the interval from 2 to n.
+For n = 10 the result will be 2,3,5,7.
+P.S. The code should work for any n, not be hard-tuned for any fixed value
+	
+
+var n = window.prompt("Enter Number:");
+		nextPrime:
+		for (let i = 2; i <= n; i++) 
+		{ 
+			for (let j = 2; j < i; j++) 
+			{ 
+    			if (i % j == 0) continue nextPrime; 
+			}
+
+			alert( i ); 
+		}
+
+
+ Replace Function Expressions with arrow functions in the code below: 
+function ask(question,yes,no) {
+            if(confirm(question)) yes()
+            else no();
+        }
+        ask("Do you agree?",
+        function() {alert("You agreed...");},
+        function() {alert("You canceled the execution");}
+        );-->
+
+*/
+      let ask = (question,yes,no)=> { if(confirm(question)) yes(); else no(); }
+
+        ask("Do you agree?",
+        yes=()=>alert("You agreed..."),
+        no=()=>alert("You cancelled the execution")
+        );
+
+	</script>
+
+</head>
+</html>
