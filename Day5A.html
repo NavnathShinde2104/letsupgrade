@@ -1,0 +1,161 @@
+<html>
+<head>
+	<title>Day 5 Assignment</title>
+</head>
+<body>
+<script>
+
+/* Q1)
+i)Accept positive Number from user
+2)add all the numbers till that number to array
+3)filter odd numbers
+4)makes cube of all filtered numbers
+*/
+
+var Arr=[];
+var n=prompt("Enter any positive number:")
+
+if(n<0)
+	document.write("Invalid number please enter positive number")	
+else
+{
+	var i;
+	for(i=0;i<=n;i++)
+	{
+		Arr.push(i)
+	}
+
+	document.write("Array of positive numbers:\t[")
+
+	for(i=0;i<=n;i++)
+	{
+		document.write(Arr[i]+",")
+	}
+	document.write("]")
+
+
+ var f=Arr.filter(el=>(el%2!=0))
+
+ document.write("<br>Filtered Odd Numbers:\t["+f)
+ document.write("]")
+
+
+
+ var m=f.map(el=>(el**3))
+ document.write("<br>Cubes of filtered Numbers:\t["+m)
+ document.write("]")
+}
+/*
+Q2)
+create a class user with features name,age and email
+he can login and logout
+
+create another class moderator with all features of user plus additional features like 
+add' coins and remove coins
+
+create one more class admin which has all functions of moderator plus additional features like
+add a course and delete a particular course for the user.
+*/
+
+
+class user
+{
+	constructor(name,age,email)
+	{
+		this.name=name;
+		this.age=age;
+		this.email=email;
+	    this.courses=[];
+	    this.coins=0;
+	}
+
+	login()
+	{
+		console.log(this.name+' has logged in')
+		return this;
+	}
+	logout()
+	{
+		console.log(this.name+' has logged out')
+		return this;
+	}
+}
+
+class moderator extends user
+{
+	constructor(name,age,email,coins)
+	{
+		super(name,age,email)
+		this.coins=0;
+	}
+	addCoins(user)
+	{
+		return user.coins++;
+	}
+
+	removecoins(user)
+	{
+		return user.coins--;
+	}
+}
+class Admin extends moderator
+{
+	constructor(name,age,email,coins,courses)
+	{
+		super(name,age,email,coins)
+		this.courses=[];
+
+	}
+	addcourse(user,course)
+	{
+		user.courses.push(course)
+		console.log(user)
+	}
+	deletecourse(user,course)
+	{
+		user.courses.pop(course)
+		console.log(user)
+	}
+
+}
+
+let u1=new user("Aditya","20","aditya@gmail.com")
+let u2=new user("Navnath","21","navnath@gmail.com")
+let m=new moderator("Gajanan","21","nikita@gmail.com")
+let admin=new Admin("Abhishek","20","abhishek@gmail.com")
+let users=[u1,u2,m,admin];
+
+users.forEach(elements=>
+{
+	console.log(elements)
+})
+
+
+u1.login()
+m.addCoins(u1)
+
+admin.addcourse(u1,'javascript')
+admin.addcourse(u2,'python')
+
+console.log(u1)
+
+m.removecoins(u1)
+
+admin.deletecourse(u1,'python')
+
+
+//Q3)
+
+async function fetchjokes()
+{
+	const responce=await fetch('https://jsonplaceholder.typicode.com/todos')
+	const data=await responce.json();
+
+	console.log(data)
+
+}
+
+fetchjokes();
+</script>
+</body>
+</html>
