@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+
+	<title>Day6 Assignment</title>
+</head>
+<body>
+
+	<button onclick="start()">Click Me</button>
+
+	<table border="0">
+		<tr>
+			<td colspan="2">Multiplication Table</td>
+		</tr>
+
+		<tr>
+			<td width="50%">Enter a Number:</td>
+			<td><input type="number" onchange="printTable(this)"></td>
+		</tr>
+
+		<tr>
+			<td colspan="2"><span id="mul"></span></td>
+		</tr>
+
+	</table>
+
+<button id="dark">Dark</button>
+<body style="text-align: center; margin-top : 10%;">
+    <h2 id="time"></h2>
+<h2 id="aa"></h2>
+
+
+<script type="text/javascript">
+	
+//Q1)write a program that will iterate over array of colors and  change the background color of page after 5 seconds
+/*
+var color=["gray","orange","cyan","blue","red","green"]
+
+function changeColor()
+{
+	setTimeout(function loop()
+	{
+		document.bgColor=color.shift();
+
+		if(color.length)
+		{
+			setTimeout(loop,1000)
+		}
+	},1000);
+}
+
+function start()
+{
+	setInterval(changeColor(),1000);
+}
+*/
+/*Q2)Write a program that will display multiplication table of a number on the webpage in a 
+proper format.Take the input from user
+*/
+
+/*
+function printTable(num)
+	{
+		var input = num.value;
+    if(!isNaN(input)) {
+        var table="";
+        var number="";
+        for(i=1;i<=10;i++) {
+            number = input * i;
+            table +=  input + " * " + i + " = " + number + "<br/>";
+        }
+    	document.getElementById("mul").innerHTML=table;
+
+		}
+		else
+		{
+			document.getElementById("mul").innerHTML="please enter a valid number"
+		}
+	}
+
+*/
+/*Q3)<!--
+Make a webpage that will ask the name of the user. Then will display a welcome message on the
+webpage. Also the webpage should also have a clock.
+Using the toggle method of classList add a dark mode feature to the website.
+*/
+
+    
+    const dmode = document.getElementById('dark');
+dmode.onclick = function changeColor(){
+    
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+    document.body.style.fontFamily = 'Helvetica';
+   
+}
+
+const ctime = document.getElementById('time');
+
+
+function clock(){
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    ctime.innerText = time;
+    
+}
+var n=prompt("Enter name");
+
+document.getElementById("aa").innerHTML+=n+"\n Welcome to our page";
+
+// clock();
+
+setInterval(clock,1000);
+
+
+
+
+
+
+
+
+</script>
+</body>
+
+</html>
