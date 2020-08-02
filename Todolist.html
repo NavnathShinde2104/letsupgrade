@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    
+</head>
+<style>
+    body {
+        background-image: "todolist.webp";
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<body background="todolist.webp" background-size=stretch>
+    <center>
+    <h1>My To do List</h1>
+    <font size=13>
+    <form action="" id="myForm">
+        <input type="text" id="todo">
+        <button type="button" id="btn">Add Item</button>
+        <br>
+        <p>I have done first thing click here
+            <button type="button" id="rm">Remove Item</button></p>
+            <br>
+        </form>
+		</center>
+        
+    <ol id="list" align-center>
+
+    </ol>
+
+
+</font>
+    <script>
+	
+	console.log("Todo List");
+
+const button = document.querySelector('#btn');
+const list = document.querySelector('#list');
+
+
+button.onclick = function(){
+    let item = document.querySelector("#todo").value;
+    console.log(item, typeof(item));
+    let text = document.createTextNode(item);
+    console.log(text);
+    let listItem = document.createElement('li');
+    listItem.appendChild(text);
+    list.appendChild(listItem);
+    document.forms.myForm.reset();
+}
+
+const remove = document.querySelector('#rm'); 
+
+remove.onclick= function() {
+    let listItem = document.querySelector('#list');
+    listItem.removeChild(document.getElementsByTagName('li')[0])
+
+}
+	</script>
+    
+</body>
+
+</html>
